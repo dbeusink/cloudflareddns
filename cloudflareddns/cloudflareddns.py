@@ -220,13 +220,12 @@ def syno():
     """
     In Synology wrapper, we echo the return value of the "update" for users to see errors:
     """
+    cloudflare_creds_helper(sys.argv[1], sys.argv[2])
     print(
         update(
-            hostname=sys.argv[1],
-            ip=sys.argv[2],
-            ttl=120,
-            cfEmail=sys.argv[3],
-            cfKey=sys.argv[4]
+            hostname=sys.argv[3],
+            ip=sys.argv[4],
+            ttl=120
         )
     )
 
